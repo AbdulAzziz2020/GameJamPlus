@@ -28,7 +28,7 @@ public class HumanPlayer : BasePlayer{
     protected override void Movement(){
         base.Movement();
         // moveInput = input.PlayerMap.Movement.ReadValue<Vector2>();
-        if(Input.GetKeyDown(KeyCode.W)){
+        if(Input.GetKeyDown(KeyCode.W) && isGrounded){
             rb.AddForce(Vector2.up * jumpForces, ForceMode2D.Impulse);
         }
         // if(facingLeft && moveInput.x > 0){
